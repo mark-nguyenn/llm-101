@@ -1,0 +1,64 @@
+[project]
+name = "llm-101"
+version = "0.1.0"
+description = "A hands-on LLM engineering monorepo, organized by topic."
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    # Providers / SDKs
+    "openai",
+    "anthropic",
+    "google-generativeai",
+    "litellm",
+    "ollama",
+    # Orchestration / RAG
+    "langchain",
+    "langchain-core",
+    "langchain-community",
+    "langchain-openai",
+    "langchain-chroma",
+    "langchain-text-splitters",
+    "chromadb",
+    "sentence-transformers",
+    # Models / training
+    "transformers",
+    "datasets",
+    "huggingface-hub",
+    "torch",
+    "scikit-learn",
+    "xgboost",
+    # Data / viz
+    "numpy",
+    "pandas",
+    "matplotlib",
+    "plotly",
+    "tiktoken",
+    # Apps / infra
+    "gradio",
+    "modal",
+    "python-dotenv",
+    "requests",
+    "beautifulsoup4",
+    "feedparser",
+    "pydantic",
+    "tqdm",
+    # Notebooks
+    "jupyterlab",
+    "ipywidgets",
+]
+
+[dependency-groups]
+dev = [
+    "pytest",
+    "ruff",
+]
+
+# When shared/ grows into a real package, promote this to a uv workspace:
+#   [tool.uv.workspace]
+#   members = ["src/shared"]
+
+[tool.ruff]
+line-length = 100
+
+[tool.pytest.ini_options]
+testpaths = ["src"]

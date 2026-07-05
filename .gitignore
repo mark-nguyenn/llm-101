@@ -1,0 +1,17 @@
+llm-engineering
+
+# Secrets
+.env
+
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.pytest_cache/
+.ruff_cache/
+
+# Data / model artifacts
+vector_db/
+preprocessed_db/
+*.pkl
